@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -19,7 +20,16 @@ public class Main {
         for (Shoe shoe : shoes) {
             System.out.println(shoe.getName() + " - " + shoe.getSize());
         }
-
+        Collections.sort(shoes, new RatingComparator());
+        System.out.println("Sort by rating:");
+        for (Shoe shoe : shoes) {
+            System.out.println(shoe.getName() + " - " + shoe.getRating());
+        }
+        Collections.sort(shoes, new StockComparator());
+        System.out.println("Sort by stock:");
+        for (Shoe shoe : shoes) {
+            System.out.println(shoe.getName() + " - " + shoe.getStock());
+        }
         Collections.sort(shoes, new NameComparator());
         System.out.println("\nSort by name:");
         for (Shoe shoe : shoes) {
@@ -31,7 +41,8 @@ public class Main {
         for (Shoe shoe : shoes) {
             System.out.println(shoe);
         }
-    }}
+    }
+}
 
 
 
