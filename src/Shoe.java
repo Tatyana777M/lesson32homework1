@@ -1,9 +1,12 @@
+import java.util.Comparator;
+import java.util.Objects;
+
 public class Shoe {
     public String name;
     public double price;
     public double size;
     public double rating;
-    private int stock;
+    public int stock;
 
     public String getName() {
         return name;
@@ -27,13 +30,12 @@ public class Shoe {
 
     @Override
     public String toString() {
-        return "Shoe{" +
-                "name='" + name + '\'' +
+        return "Shoe " +
+                "name = '" + name + "'" +
                 ", price=" + price +
                 ", size=" + size +
                 ", rating=" + rating +
-                ", stock=" + stock +
-                '}';
+                ", stock=" + stock ;
     }
 
     public Shoe(String name, double price, double size, double rating, int stock) {
